@@ -48,8 +48,13 @@
     'name': 'entity.name.function.unibasic'
   },
   {
-    'comment': 'Operators',
-    'match': '(\\(|\\)|\\/|\\&|\\$|,|\\bCAT\\b|:|=|<|>|;|\\*|\\-|\\+|\\^|#|\\bLE\\b|\\bLT\\b|\\bEQ\\b|\\bGE\\b|\\bGT\\b|\\bNE\\b|\\bOR\\b|\\bAND\\b)'
+    'comment': 'Operators surrounded by spaces',
+    'match': '(\\s)(CAT|LE|LT|EQ|GE|GT|NE|OR|AND)(\\s)'
+    'name': 'keyword.control.unibasic'
+  },
+  {
+    'comment': 'Operators that can concatentate without spaces',
+    'match': '(\\(|\\)|\\/|\\&|\\$|,|:|=|<|>|;|\\*|\\-|\\+|\\^|#)'
     'name': 'keyword.control.unibasic'
   },
   {
