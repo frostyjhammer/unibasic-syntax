@@ -55,7 +55,7 @@
   {
     'comment': 'Operators',
     'match': '(\\(|\\)|\\/|\\&|\\$|,|\\bCAT\\b|:|=|<|>|;|\\*|\\-|\\+|\\^|#|\\bLE\\b|\\bLT\\b|\\bEQ\\b|\\bGE\\b|\\bGT\\b|\\bNE\\b|\\bOR\\b|\\bAND\\b)'
-    'name': 'keyword.operator.unibasic'
+    'name': 'keyword.control.unibasic'
   },
   {
     'comment': 'Take a stab at Locate() et cetera'
