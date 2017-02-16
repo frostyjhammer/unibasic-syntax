@@ -46,9 +46,5 @@
   {
     'match': '(CALL)\\s+([A-Z0-9_\\.-]+)'
     'name': 'entity.name.function.pick'
-  },
-  {
-    'match': '(=|\\<|\\>|\\<=|\\>=|\\bOR\\b|\\bAND\\b|:|\\+)'
-    'name': 'keyword.operator.pick'
   }
 ]
