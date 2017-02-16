@@ -5,46 +5,52 @@
 
 'patterns': [
   {
+    'comment': 'Comment line starting with Asterisk'
     'match': '^\\s*\\*.*\\n'
     'name': 'comment.line.asterisk.unibasic'
   },
   {
+    'comment': 'Comment line starting with Bangsign'
     'match': '^\\s*\\!.*\\n'
     'name': 'comment.line.bangsign.unibasic'
   },
   {
+    'comment': 'Numberic Constant'
     'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
     'name': 'constant.numeric.unibasic'
   },
   {
+    'comment': 'String surrounded by Single Quotes'
     'begin': '\''
     'end': '\''
     'name': 'string.quoted.single.unibasic'
   },
   {
+    'comment': 'String surrounded by Double Quotes'
     'begin': '\"'
     'end': '\"'
     'name': 'string.quoted.double.unibasic'
   },
   {
+    'comment': 'String surrounded by Backslashes'
     'begin': '\\\\'
     'end': '\\\\'
     'name': 'string.quoted.backslash.unibasic'
   },
   {
+    'comment': 'Whole bunch of Keywords'
     'match': '\\s(ABS|AND|BEGIN|CALL|CASE|CLEARFILE|CLOSE|COMMON|CONTINUE|CONVERT|CRT|DATA|DATE\\(\\)|DEBUG|DELETE|DIM|DO|ELSE|END|EQ|EQU|EQUATE|EXECUTE|EXIT|FOR|FORMLIST|FROM|FUNCTION|GE|GETLIST|GO|GOSUB|GOTO|GT|HEADING|IF|IN|INCLUDE|INPUT|LE|LOCKED|LOOP|LT|MAT|MATCH|MATCHES|MATREAD|MATREADU|MATWRITE|MATWRITEU|MOD|NE|NEXT|NOT|NULL|NUM|OFF|ON|OPEN|OPENSEQ|OR|OSCLOSE|OSOPEN|OSREAD|OSWRITE|PAUSE|PCPERFORM|PRINT|PROGRAM|PROMPT|READ|READFWD|READLIST|READNEXT|READSEQ|READU|READV|RELEASE|REM|REMOVE|REPEAT|RETURN|RNDSEED|RQM|RTNLIST|SELECT|SEQ|SETINDEX|SETTING|SLEEP|STEP|STOP|STR|SUBROUTINE|THEN|TIME\\(\\)|TIMEDATE\\(\\)|TO|UDEXECUTE|UNTIL|USING|WAIT|WHILE|WRITE|WRITELIST|WRITESEQ|WRITEU|WRITEV)\\s'
     'name': 'keyword.control.unibasic'
   },
   {
-    'match': '(SUBROUTINE)\\s+([A-Z0-9_-]+)'
-    'name': 'entity.name.function.pick'
+    'comment': 'Program/Subroutine Directive at Top of Routine'
+    'match': '(PROGRAM|SUBROUTINE)\\s+([A-Z0-9_-]+)'
+    'name': 'entity.name.function.unibasic'
   },
   {
-    'match': '(GOSUB)\\s+([A-Z_\\.0-9]*)'
-    'name': 'entity.name.function.pick'
-  },
-  {
-    'match': '(CALL)\\s+([A-Z0-9_\\.-]+)'
-    'name': 'entity.name.function.pick'
+    'comment': 'Take a stab at Locate() et cetera'
+    'begin': 'LOCATE\\('
+    'end': '\\)'
+    'name': 'entity.name.function.unibasic'
   }
 ]
