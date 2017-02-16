@@ -33,5 +33,14 @@
   {
     'match': '(SUBROUTINE)\\s+([A-Z0-9_-]+)'
     'name':'entity.name.function.pick'
+  },
+  {
+    'match': '(GOSUB)\\s+([A-Z_\\.0-9]*)'
+    'name':'entity.name.function.pick'
+  },
+  {
+    'match': '(CALL)\\s+([A-Z0-9_\\.-]+)'
+    'name':'entity.name.function.pick'
   }
+
 ]
