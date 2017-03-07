@@ -6,16 +6,16 @@
 'patterns': [
   {
     'comment': 'Comment line starting with Asterisk'
-    'match': '^\\s*\\*.*\\n'
+    'match': '^\\s*\\*.*|^(\\*).*|(?<=;)\\s*\\*.*'
     'name': 'comment.line.asterisk.unibasic'
   },
   {
     'comment': 'Comment line starting with Bangsign'
-    'match': '^\\s*\\!.*\\n'
+    'match': '^\\s*\\!.*|^(\\!).*|(?<=;)\\s*\\!.*'
     'name': 'comment.line.bangsign.unibasic'
   },
   {
-    'comment': 'Numberic Constant'
+    'comment': 'Numeric Constant'
     'match': '\\b(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))\\b'
     'name': 'constant.numeric.unibasic'
   },
@@ -61,6 +61,11 @@
     'comment': 'Take a stab at Locate() et cetera'
     'begin': 'LOCATE\\('
     'end': '\\)'
+    'captures': {
+      '1': { 'name': 'keyword.control.unibasic' },
+      '2': { 'name': 'variable.parameters.unibasic' },
+      '3': { 'name': 'keyword.control.unibasic' }
+    }
     'name': 'entity.name.function.unibasic'
   }
 ]
